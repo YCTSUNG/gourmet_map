@@ -20,8 +20,6 @@ public class GourmetMapRequest {
 	@JsonProperty("gourmet_map2_list")
 	private List<GourmetMap2> gourmetMap2List;
 	
-	
-	
 	public String dinerName;
 	
 	public String dish;

@@ -12,7 +12,7 @@ public interface GourmetMapDao extends JpaRepository<GourmetMap,String>{
 	
 	public List<GourmetMap> findByCity(String city);
 	
-	public List<GourmetMap> findByDinerScoreGreaterThanDesc(int dinerScore);
+	public List<GourmetMap> findByDinerScoreGreaterThanOrderByDinerScoreDesc(int dinerScore);
 	
 
 }

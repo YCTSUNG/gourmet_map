@@ -41,9 +41,4 @@ public class GourmetMap3 implements Serializable {
 	public void setDish(String dish) {
 		this.dish = dish;
 	}
-	
-	
-	
-	
-
 }

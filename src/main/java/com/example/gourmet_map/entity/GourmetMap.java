@@ -13,7 +13,6 @@ public class GourmetMap  {
 	@Column(name = "diner_name")
 	public String dinerName;
 	
-	
 	@Column(name = "city")
 	public String city;
 	
@@ -21,20 +20,14 @@ public class GourmetMap  {
 	public int dinerScore;
 	
 	public GourmetMap() {
-		
 	}
 	
-	
-
 	public GourmetMap(String dinerName, String city, int dinerScore) {
 		super();
 		this.dinerName = dinerName;
 		this.city = city;
 		this.dinerScore = dinerScore;
 	}
-
-
-
 
 	public String getDinerName() {
 		return dinerName;
@@ -60,12 +53,4 @@ public class GourmetMap  {
 		this.dinerScore = dinerScore;
 	}
 	
-	
-	
-	
-	
-
-	
-	
-
 }

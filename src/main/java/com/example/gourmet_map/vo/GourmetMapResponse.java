@@ -35,8 +35,7 @@ public class GourmetMapResponse {
 		this.gourmetMapList = gourmetMapList;
 		this.message = message;
 	}
-	
-	
+
 	
 	public GourmetMapResponse(String message, List<GourmetMap2> gourmetMap2List) {
 		super();
@@ -50,7 +49,6 @@ public class GourmetMapResponse {
 		this.gourmetMap = gourmetMap;
 		this.message = message;
 	}
-	
 	
 	
 	
@@ -78,6 +76,7 @@ public class GourmetMapResponse {
 		super();
 		this.gourmetMap2 = gourmetMap2;
 	}
+
 
 
 	public GourmetMap getGourmetMap() {
@@ -132,9 +131,4 @@ public class GourmetMapResponse {
 		this.gourmetMap2List = gourmetMap2List;
 	}
 	
-	
-	
-	
-	
-
 }

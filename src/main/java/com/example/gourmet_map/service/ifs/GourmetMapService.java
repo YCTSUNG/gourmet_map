@@ -12,11 +12,14 @@ public interface GourmetMapService {
 	
 	public GourmetMapResponse addDiner(GourmetMapRequest gourmetMapRequest);
 	
+	public GourmetMapResponse deleteDiner(GourmetMapRequest gourmetMapRequest);
+	
+	public GourmetMapResponse updateDiner(GourmetMapRequest gourmetMapRequest);
+	
 	
 	public GourmetMapResponse addDinerDish(GourmetMapRequest gourmetMapRequest);
 	
-	
-	public GourmetMapResponse update(UpdateRequest updateRequest);
+	public GourmetMapResponse updateDinerDish(GourmetMapRequest gourmetMapRequest);
 	
 	
 	public List<GourmetMap> findByCity(String city);

@@ -3,6 +3,7 @@ package com.example.gourmet_map.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,9 @@ import com.example.gourmet_map.vo.GourmetMapRequest;
 import com.example.gourmet_map.vo.GourmetMapResponse;
 import com.example.gourmet_map.vo.UpdateRequest;
 
+@CrossOrigin
 @RestController
+
 public class GourmetMapController {
 
 	@Autowired
@@ -25,16 +28,27 @@ public class GourmetMapController {
 		return gourmetMapService.addDiner(gourmetMapRequest);
 	}
 	
-	@PostMapping("add_dinerdish")
+	@PostMapping("update_diner")
+	public GourmetMapResponse updateDiner(@RequestBody GourmetMapRequest gourmetMapRequest) {
+		return gourmetMapService.updateDiner(gourmetMapRequest);
+	}
+	
+	@PostMapping("delete_diner")
+	public GourmetMapResponse deleteDiner(@RequestBody GourmetMapRequest gourmetMapRequest) {
+		return gourmetMapService.deleteDiner(gourmetMapRequest);
+	}
+	
+	@PostMapping("update_diner_dish")
+	public GourmetMapResponse updateDinerDish(@RequestBody GourmetMapRequest gourmetMapRequest){
+		return gourmetMapService.updateDinerDish(gourmetMapRequest);
+	}
+	
+	@PostMapping("add_diner_dish")
 	public GourmetMapResponse addDinerDish(@RequestBody GourmetMapRequest gourmetMapRequest) {
 		
 		return gourmetMapService.addDinerDish(gourmetMapRequest);
 	}
 	
-	@PostMapping("update")
-	public GourmetMapResponse update(@RequestBody UpdateRequest updateRequest) {
-		return gourmetMapService.update(updateRequest);
-	}
 	
 	@PostMapping("find_by_city")
     public List<GourmetMap> findByCity(@RequestBody GourmetMapRequest gourmetMapRequest ){
